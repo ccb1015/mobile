@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+</head>
+<body>
+		<style>
+			.mui-table h4,.mui-table h5,.mui-table .mui-h5,.mui-table .mui-h6,.mui-table p{
+		        margin-top: 0;
+		    }
+		    .mui-table h4{
+		        line-height: 21px;
+		        font-weight: 500;
+		    }
+		
+		    .mui-table .oa-icon{
+		        position: absolute;
+		        right:0;
+		        bottom: 0;
+		    }
+		    .mui-table .oa-icon-star-filled{
+		        color:#f14e41;
+		    }
+		</style>
+		<style type="text/css">
+    .menu-demo {margin: 0;padding: 0;background-color:#f2f2f2;overflow: hidden;}
+    .menu-demo li input{position: absolute;left: 0;opacity: 0;z-index: 2;cursor: pointer;height: 1em;width:1em;top: 0;}
+    .menu-demo li {position: relative;list-style: none;}
+    .menu-demo>li{border-bottom: 1px solid #d9d9d9;}
+    .menu-demo li label {max-width:999px;cursor: pointer;display: block;margin:0 0 0 -50px;padding: 15px 10px 15px 70px;background: url(../../images/cp-detail-arrow-b.png) no-repeat right center;background-position:95% 50%;white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }
+    .menu-demo li label:hover,li label:focus{background-color:#a7a7a7;color:#fff;}
+    .menu-demo li input + ol{display: none;}
+    .menu-demo input:checked + ol {padding-left:14px;height: auto;display: block;}
+    .menu-demo input:checked + ol > li { height: auto;} 
+    .menu-demo li.file a{margin:0 -10px 0 -50px;padding: 15px 20px 15px 70px;text-decoration:none;display: block;color:#333333;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+    .menu-demo li.file a:hover,li.file a:focus{background-color:#a7a7a7;color:#fff;}
+    .menu-demo .folderOne{font-size: 18px;}
+    .menu-demo .folderTwo{font-size:16px;}
+    .menu-demo .folderThree{font-size:14px;}
+    </style>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        <div>
+    <ol class="menu-demo">
+        <li>
+            <label for="folder1" class="folderOne">菜单1</label> <input type="checkbox" id="folder1" />
+            <ol>
+                <li>
+                    <label for="subfolder1"class="folderTwo">菜单1-1</label> <input type="checkbox" id="subfolder1"  />
+                    <ol>
+                        <li class="file folderThree"> <label for="folder11" class="folderOne1">菜单1-1-1</label> <input type="checkbox" id="folder11" />
+
+                            <ol>
+                                <li class="file "><a href="#">菜单1-1-1-1</a></li>
+                                <li class="file "><a href="#">菜单1-1-1-1</a></li>
+                            </ol>
+
+                        </li>
+                        <li class="file folderThree"><a href="#">菜单1-1-2</a></li>
+                        <li class="file folderThree"><a href="#">菜单1-1-3</a></li>
+                    </ol>
+                </li>
+                <li class="file folderTwo"><a href="#">菜单1-2</a></li>
+                <li class="file folderTwo"><a href="#">菜单1-3</a></li>
+            </ol>
+
+        </li>
+        <li>
+            <label for="folder2" class="folderOne" >ZCMS</label> <input type="checkbox" id="folder2" />
+            <ol>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+                <li>
+                    <label for="subfolder2" class="folderTwo">实时数据</label> <input type="checkbox" id="subfolder2"  />
+                    <ol>
+                        <li class="file folderThree"><a href="#">实时数据</a></li>
+                        <li class="file folderThree"><a href="#">实时数据</a></li>
+                        <li class="file folderThree"><a href="#">实时数据</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <label for="folder3"  class="folderOne">ZAS</label> <input type="checkbox" id="folder3" />
+            <ol>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+            </ol>
+        </li>
+        <li>
+            <label for="folder4"  class="folderOne">ZHTML标签</label> <input type="checkbox" id="folder4"/>
+            <ol>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+            </ol>
+        </li>
+        <li>
+            <label for="folder5"  class="folderOne">UI框架API手册</label> <input type="checkbox" id="folder5"/>
+            <ol>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+                <li class="file folderTwo"><a href="#">实时数据</a></li>
+            </ol>
+        </li>
+    </ol>
+</div>
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		                <h1 class="mui-title">消息</h1>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+		    		    <a class="mui-tab-item mui-active" href="#">
+		    		        <span class="mui-icon mui-icon-home"></span>
+		    		        <span class="mui-tab-label">首页</span>
+		    		    </a>
+		    		    <a class="mui-tab-item" href="#">
+		    		        <span class="mui-icon mui-icon-chatboxes"></span>
+		    		        <span class="mui-tab-label">消息</span>
+		    		    </a>
+		    		    <a class="mui-tab-item" href="#">
+		    		        <span class="mui-icon mui-icon-email"></span>
+		    		        <span class="mui-tab-label">邮件</span>
+		    		    </a>
+		    		    <a class="mui-tab-item" href="my.html">
+							<span class="mui-icon">
+								<img src="img/wode.png" width="80%" height="80%" style="margin-top: 15%;"/></span>
+							<span class="mui-tab-label">我的</span>
+						</a>
+		    		</nav>
+		    		
+		    		
+		    		
+		    		
+		    		<div class=""></div>
+		    		
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		                    <div class="mui-content">
+		                    	<div class="mui-card">
+								    <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+								        <li class="mui-table-view-cell">
+				        	                
+								            <div class="mui-table">
+								                <div class="mui-table-cell mui-col-xs-8">
+								                    <h4 class="mui-ellipsis">门户吗们门户</h4>
+								                    <h5>主题：xxxx</h5>
+								                    <p class="mui-h6 mui-ellipsis">Hi，李明</p>
+								                </div>
+								                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								                    <span class="mui-h5">12:25</span>
+								                </div>
+								                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								                    <a href="edit.html" class="mui-navigate-right">
+				        	                		</a>
+								                </div>
+								
+								                
+								            </div>
+								        </li>
+								        <li class="mui-table-view-cell">
+								            <div class="mui-table">
+								                <div class="mui-table-cell mui-col-xs-10">
+								                    <h4 class="mui-ellipsis">门户吗们门户</h4>
+								                    <h5>主题：xxxx</h5>
+								                    <p class="mui-h6 mui-ellipsis">Hi，李明</p>
+								                </div>
+								                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								                    <span class="mui-h5">12:25</span>
+								                </div>
+								            </div>
+								        </li>
+								        <li class="mui-table-view-cell">
+								            <div class="mui-table">
+								                <div class="mui-table-cell mui-col-xs-10">
+								                    <h4 class="mui-ellipsis">门户吗们门户</h4>
+								                    <h5>主题：xxxx</h5>
+								                    <p class="mui-h6 mui-ellipsis">Hi，李明</p>
+								                </div>
+								                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								                    <span class="mui-h5">12:25</span>
+								                </div>
+								            </div>
+								        </li>
+								    </ul>
+								</div>
+							</div>     
+		                </div>
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+        mui.init({});
+        mui('.mui-bar-tab').on('tap', 'a', function (e) {
+            var href = this.getAttribute('href');
+            if (href != '') {
+                location.href = href;
+            }
+        });
+        mui('.mui-table-cell').on('tap', 'a', function (e) {
+            var href = this.getAttribute('href');
+            if (href != '') {
+                location.href = href;
+            }
+        });
+    	</script>
+	</body>
+</html>
+

@@ -1,0 +1,122 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+.mui-plus.mui-android header.mui-bar { display: none; }
+
+.mui-plus.mui-android .mui-bar-nav ~ .mui-content { padding: 0; }
+
+.relative { position: relative; }
+
+.ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.link { color: #07d; }
+    .link:link,
+    .link:hover,
+    .link:visited,
+    .link:active { color: #07d; }
+
+.clearfix { *zoom: 1; }
+    .clearfix:after { content: ""; display: table; clear: both; }
+
+.center,
+.text-center { text-align: center; }
+
+img {vertical-align: middle;}
+.img-circle {border-radius: 50%;}
+.img-default{width: 100%;}
+
+.index-type-title { background-color: #e25710; color: #fff; padding: 3px 2px; }
+
+.pro-table-view .mui-media-object { max-width: 80px; height: 80px; }
+.pro-table-view .mui-media-title { font-size: 14px; color: #8f8f94; }
+.pro-table-view .mui-media-body { font-size: 16px; color: #333; line-height: 1.6rem; }
+    .pro-table-view .mui-media-body p { font-size: 16px; color: #333; }
+.hide { display: none; }
+.red {color: #FF0000;}
+.yellow{color:#FFFF00}
+.green{color: #008000;}
+
+/*scroll to top*/
+
+.backTop { background: #DDDDDD; border-radius: 50%; position: fixed; right: 10px; bottom: 15px; width: 38px; height: 38px; z-index: 9999; text-align: center; font-size: 18px; color: #666666; padding-top: 8px; opacity: 0.8; }
+
+.oa-contact-cell.mui-table .mui-table-cell { padding: 11px 0; vertical-align: middle; }
+
+.oa-contact-cell { position: relative; margin: -11px 0; }
+
+.oa-contact-avatar { width: 75px; }
+
+    .oa-contact-avatar img { /*border-radius: 50%;*/ max-width: 80px; height: 80px; }
+
+.oa-contact-content { width: 100%; }
+
+.oa-contact-name { margin-right: 20px; }
+
+.oa-contact-name, oa-contact-position { float: left; }
+
+.demo .mui-content{
+	padding-bottom:60px ;
+}
+/*header*/
+.demo header{ background-color: #EC971F; }
+.demo header h1{ background-color: #EC971F; color: #fff; }
+.demo header a{color: #FFF; font-size: 1.1rem;line-height: 1.5rem;}
+.demo header.mui-bar a .mui-icon{padding-right:3px;padding-left:3px; font-size: 1.1rem;}
+
+.demo header .mui-search span{color: #fff;padding-top:3px;}
+.demo header .mui-search input,
+.demo header .mui-search.mui-active:before{color:#fff;}
+.demo header .mui-search.mui-active:after{color: #ccc;}
+
+.demo header .mui-search span:last-child{font-size: .8rem;}
+.demo header .mui-search .mui-icon{float:right;color: #fff;padding-top:7px; margin-right: 0;}
+
+.demo .header-bar{position: absolute;top: 5px ;left: 5px;right:0;}
+.demo .header-bar .mui-action-back{ border-radius: 50%;background-color: #EC971F;color: #fff;}
+.demo .footer-bar{background: none;text-align: center;position: fixed;z-index: 10;right: 0;left: 0;bottom: 0;display: table;width: 100%;height: 50px;padding: 0;table-layout: fixed;}
+
+.mui-table-view.index-grid-9 .mui-media .mui-icon{}
+
+.mui-table-view.index-grid-9 .mui-table-view-cell .mui-media-body{font-size: .7rem;}
+
+/*底部*/
+.mui-bar-tab.zj-index-bar .mui-tab-item.mui-active .mui-icon~.mui-tab-label{color: #EC971F;}
+
+/*首页广告*/
+.index-ad {margin-bottom: 5px;}
+.index-ad img{width: 100%;}
+
+.mui-grid-view.index-grid-hot{margin-bottom: 3px;}
+.mui-grid-view.index-grid-hot .mui-table-view-cell{padding: 0;}
+.mui-grid-view.index-grid-hot .mui-table-view-cell>a:not(.mui-btn){padding: 0;}
+
+/*首页产品列表*/
+.mui-table-view.index-pro-9 .mui-table-view-cell .mui-media-body{font-size: .5rem;text-align: left;}
+.index-media-object {position: relative;}
+.index-media-object .addcar{/*position: absolute;right:3px;bottom: 3px;*/float:right;}
+.index-media-object .price{/*position: absolute;left:3px;bottom: 3px; */color: #ff0000; font-size: .8rem; float:left;}
+
+/*用户中心*/
+.ucenter-header{text-align: center;  background: #F0AD4E;padding: 15px; }
+.ucenter-header img{border:3px solid #f8f8f8;}
+.ucenter-header label{display: block; margin-top: 5px; color: #fff;}
+.ucenter-box{ margin-top: 8px;}
+.ucenter-box ,.ucenter-box .mui-table-view,.ucenter-box .ucenter-title{ background-color: #fff; }
+.ucenter-box .mui-table-view.mui-grid-9 .mui-table-view-cell{padding-top: 0;padding-bottom: 0; border-bottom: none;}
+
+.ucenter-title{ border-bottom: 1px solid #F8F8F8; color:#333333 ; padding: 3px 2px; }
+.ucenter-title h4{line-height: 1rem; font-weight: normal; padding-left: 3px;font-size: 1rem;}
+.ucenter-title a{display:inline-block; color: #797979; line-height: 1rem; font-size: .8rem;}
+
+.u-empty{text-align: center; margin-top: 5rem;}
+.u-empty label{color: #999999; line-height: 2.5rem;}
+.u-empty span.u-empty-icon{display: block; background-repeat: none; background-size: cover; width: 5rem;height:5rem; margin:5rem auto 1rem;}
+.u-empty span.u-all-empty{background-image: url(../img/icon/ucenter-empty.png); }
+/*地址管理*/
+.u-empty span.u-address-empty{background-image: url(../img/address-empty.png); }
+
+/*购物车*/
+.u-empty span.u-cart-empty{background-image: url(../img/icon/cart-empty.png);}
+/*分类*/

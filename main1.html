@@ -6,21 +6,161 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
 	</head>
-
+<style type="text/css">
+	.epm.nav-menu-list {
+  position: relative;
+  top: 0; }
+  .epm.nav-menu-list .nav-menu-item {
+    padding: .25rem .5rem;
+    position: relative; }
+    .epm.nav-menu-list .nav-menu-item:first-child {
+      padding-top: .5rem; }
+    .epm.nav-menu-list .nav-menu-item .anchor {
+      display: block;
+      border-bottom: none;
+      padding: .25rem;
+      font-weight: 400;
+      background-color: #364150;
+      line-height: 32px;
+      text-decoration: none;
+      color: #ffffff;
+      position: relative; }
+      .epm.nav-menu-list .nav-menu-item .anchor .content {
+        overflow: hidden;
+        vertical-align: top; }
+        .epm.nav-menu-list .nav-menu-item .anchor .content .icon {
+          text-align: center;
+          min-width: 30px;
+          min-height: 30px;
+          margin-right: 1rem;
+          margin-left: 1px;
+          background-size: 30px;
+          float: left;
+          font-size: 1.2rem; }
+        .epm.nav-menu-list .nav-menu-item .anchor .content .body {
+          vertical-align: top;
+          position: relative; }
+          .epm.nav-menu-list .nav-menu-item .anchor .content .body .title {
+            padding-left: 1px;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+          .epm.nav-menu-list .nav-menu-item .anchor .content .body .detail {
+            max-height: 150px;
+            overflow: hidden;
+            display: block;
+            font-size: .75rem;
+            color: #E0E5EE;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+      .epm.nav-menu-list .nav-menu-item .anchor:hover {
+        background: #061c3f;
+        /*border-radius: .25rem;*/
+        color: #ffffff;
+        text-decoration: none; }
+    .epm.nav-menu-list .nav-menu-item .anchor.toggle > .content > .body:before {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      content: "\f104";
+      font-family: FontAwesome;
+      opacity: 1;
+      /* -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;  */}
+    .epm.nav-menu-list .nav-menu-item .anchor.toggle.open > .content > .body:before {
+      content: "\f107"; }
+  .epm.nav-menu-list .nav-submenu-list {
+   /*  -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  */}
+    .epm.nav-menu-list .nav-submenu-list.collapse {
+      display: none; }
+    .epm.nav-menu-list .nav-submenu-list.collapse.in {
+      display: block; }
+  .epm.nav-menu-list .nav-submenu-item .anchor {
+    line-height: 26px; }
+    .epm.nav-menu-list .nav-submenu-item .anchor .content .icon {
+      margin-right: .2rem;
+      min-height: 26px;
+      font-size: 1rem; }
+</style>
 	<body class="demo">
 		<!-- 主界面菜单同时移动 -->
 		    <!-- 侧滑导航根容器 -->
+		    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--侧滑菜单部分-->		
+					
 		    <div class="mui-off-canvas-wrap mui-draggable">
 		        <!-- 主页面容器 -->
 		        <div class="mui-inner-wrap">
 		            <!-- 菜单容器 -->
 		            <aside class="mui-off-canvas-left" id="offCanvasSide">
-		                <div class="mui-scroll-wrapper">
+		                <div class="mui-scroll-wrapper" id="offCanvasSideScroll">
 		                    <div class="mui-scroll">
 		                        <!-- 菜单具体展示内容 -->
-		                        
+		                        <div class="epm navigation">       
+			<div class="epm navigation dd" id="nestable">
+			<ul class="epm nav-menu-list dd-list" id="mymenu">
+				<li class="nav-menu-item dd-item" id="200" ord="1" menuinfoid="null" isuser="null">
+				<div class="dd-handle" title="">
+					<a menu_code="SECURITY_MANAGE" href="javascript:void(0)" class="anchor">
+						<div class="content SECURITY_MANAGE">
+							<div class="icon"><i class="fa fa-unlock-alt"></i></div>
+							<div class="body">
+								<div class="title">安全管理</div>
+							</div>
+							<div class="menu-edit" style="display:none"></div>
+							<div class="menu-remove" style="display:none"></div>
+						</div>
+						<div class="menu-collapse" onclick="collapseClick()"></div>
+					</a>
+				</div>
+				<ul class="nav-submenu-list dd-list collapse childMenu" style="display: none">
+					<li class="nav-submenu-item dd-item" id="216" ord="5" menuinfoid="200" isuser="null">
+						<div class="dd-handle" title="">
+							<a menu_code="security-auth" href="javascript:void(0)" class="anchor toggle padding-lvl1">
+								<div class="content security-auth">
+									<div class="icon"><i class="fa fa-blank"></i></div>
+									<div class="body"><div class="title">安全权限</div></div>
+									<div class="menu-edit" style="display:none"></div>
+									<div class="menu-remove" style="display:none"></div>
+								</div>
+								<div class="menu-collapse open" onclick="collapseClick()"></div>
+							</a>
+						</div>
+						<ul class="dd-list collapse nav-submenu-list childMenu1" style="display: none;">
+							<li class="nav-submenu-item dd-item" id="207" ord="7" menuinfoid="216" isuser="null">
+								<div class="dd-handle" title="">
+									<a menu_code="tableInfo" href="javascript:void(0)" class="anchor J_menuItem padding-lvl2">
+										<div class="content tableInfo">
+											<div class="icon"><i class="fa fa-blank"></i></div>
+											<div class="body"><div class="title">主表管理</div></div>
+											<div class="menu-edit" style="display:none"></div>
+											<div class="menu-remove" style="display:none"></div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-submenu-item dd-item" id="208" ord="8" menuinfoid="216" isuser="null"><div class="dd-handle" title=""><a menu_code="DATARESREGRULE" href="/security/dataResRegRule!list.action" class="anchor J_menuItem padding-lvl2"><div class="content DATARESREGRULE"><div class="icon"><i class="fa fa-blank"></i></div><div class="body"><div class="title">规则管理</div></div><div class="menu-edit" style="display:none"></div><div class="menu-remove" style="display:none"></div></div></a></div>
+								
+							</li>
+							<li class="nav-submenu-item dd-item" id="209" ord="9" menuinfoid="216" isuser="null"><div class="dd-handle" title=""><a menu_code="RESOURCE" href="/security/resources!list.action" class="anchor J_menuItem padding-lvl2"><div class="content RESOURCE"><div class="icon"><i class="fa fa-blank"></i></div><div class="body"><div class="title">资源管理</div></div><div class="menu-edit" style="display:none"></div><div class="menu-remove" style="display:none"></div></div></a></div>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</div>
+			</div>
+			
 		                    </div>
 		                </div>
 		            </aside>
@@ -55,7 +195,7 @@
 		                    
 		                </div>
 		            </div>
-		       	 <div class="mui-off-canvas-backdrop"></div>
+		       	
 		        </div>
 		    </div>
 		<script src="js/mui.min.js"></script>
@@ -68,7 +208,25 @@
                 location.href = href;
             }
         });
+        mui('#offCanvasSideScroll').scroll();
     	</script>
+    	<script type="text/javascript" src="js/jquery.min.js">
+        	
+        </script>
+       <script>
+  
+
+		var menuItemClick = function(event) {
+			collapseClick.call($(event.target).parents("li:first").find(
+					".menu-collapse:first"));
+		};
+		function collapseClick(event){
+			$(this).toggleClass("open");
+			$(".nav-submenu-list", $(this).parents("li:first"))
+					.filter(":first").toggle();
+		}
+	$(".nav-menu-item").bind("click", menuItemClick);
+</script>
 	</body>
 
 </html>
